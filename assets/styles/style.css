@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --fondo-primario: #F3F5FC;
+    --texto-primario: #0A3871;
+    --texto-secundario: ;
+    --texto-terciario: #495057;
+    
+    --fuente-inter: "Inter", sans-serif;
+
+    --fondo-secundario: #E2E2E2;
+    --boton-primario: #0A369D;
+    --borde-destacado: #0085f2;
+    
+    
+    --texto-destacado: #0069C2;
+}
+
+body {
+    background-color: var(--fondo-primario);
+    color: var(--texto-primario);
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    padding: 3% 15%;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main__entrada {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main_entrada__texto {
+    padding: 20% 0;
+    height: 288px;
+    vertical-align: bottom;
+    font-size: 32px;
+    font-family: var(--fuente-inter);
+    color: var(--texto-primario);
+    background-color: var(--fondo-primario);
+    border-color: #000;
+}
+
+::placeholder {
+    color: var(--texto-primario);
+}
+
+.main__entrada__informacion {
+    padding: 10% 0%;
+    font-size: 12px;
+    font-family: var(--fuente-inter);
+    color: var(--texto-terciario);
+}
+
+.main__entrada__informacion__icono {
+    width: 12px;
+    color: var(--texto-terciario);
+}
+
+.main__entrada__boton {
+    width: 50%;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--texto-primario);
+    border: 2px solid var(--borde-primario);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.main__salida {
+    border: none;
+}
+
+.main__salida__texto {
+    background-image: url;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--fondo-secundario);
+    color: #000;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="./assets/styles/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <script src="./scripts/app.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <section class="main__entrada">
+            <textarea id="textoUsuario" class="main_entrada__texto" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="main__entrada__informacion">
+                <img class="main__entrada__informacion__icono" src="./assets/icons/info-circle-fill.svg" alt="Símbolo de advertencia">
+                Solo letras minúsculas sin acentos
+            </p>
+            <button onclick="convertirTexto('encriptar')" class="main__entrada__boton">Encriptar</button>
+            <button onclick="convertirTexto('descodificar')" class="main__entrada__boton">Desencriptar</button>
+        </section>
+        <section class="main__salida">
+            <textarea id="salida" class="main__salida__texto"></textarea>
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <button onclick="copiarTexto()" class="main__salida__boton">Copiar</button>
+        </section>
+    </main>
+    <footer>
+        <small>Edwart Llanos 2024</small>
+    </footer>
+</body>
+</html>
