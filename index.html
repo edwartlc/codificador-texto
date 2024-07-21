@@ -10,20 +10,22 @@
 <body>
     <main class="main">
         <section class="main__entrada">
-            <textarea id="textoUsuario" class="main_entrada__texto" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea id="textoUsuario" class="main__entrada__texto" placeholder="Ingrese el texto aquí"></textarea>
             <p class="main__entrada__informacion">
                 <img class="main__entrada__informacion__icono" src="./assets/icons/info-circle-fill.svg" alt="Símbolo de advertencia">
                 Solo letras minúsculas sin acentos
             </p>
-            <button onclick="convertirTexto('encriptar')" class="main__entrada__boton">Encriptar</button>
-            <button onclick="convertirTexto('descodificar')" class="main__entrada__boton">Desencriptar</button>
+            <div class="main__entrada__botones">
+                <button onclick="convertirTexto('codificar')" id="botonCodificar">Encriptar</button>
+                <button onclick="convertirTexto('descodificar')" id="botonDescodificar">Desencriptar</button>
+            </div>
         </section>
         <section class="main__salida">
-            <textarea id="salida" class="main__salida__texto"></textarea>
+            <textarea class="main__salida__texto" id="salida"></textarea>
             <figure>
                 <img src="" alt="">
             </figure>
-            <button onclick="copiarTexto()" class="main__salida__boton">Copiar</button>
+            <button onclick="copiarTexto()" id="botonCopiar">Copiar</button>
         </section>
     </main>
     <footer>
