@@ -1,4 +1,4 @@
-const clavesEncriptacion = {'e': 'enter', 'i': 'imes', 'a': 'ai', 'o': 'ober', 'u': 'ufat'};
+const clavesCodificacion = {'e': 'enter', 'i': 'imes', 'a': 'ai', 'o': 'ober', 'u': 'ufat'};
 const caracteresValidos = ' abcdefghijklmnopqrstuvwxyz';
 
 function validarTexto(texto) {
@@ -22,8 +22,8 @@ function convertirTexto(tipoConversion) {
     if (validarTexto(entrada) == false) {
         alert('Debe ingresar solo letras minúsculas sin acentos y sin caracteres especiales.');
     } else {
-        for (let [clave, valor] of Object.entries(clavesEncriptacion)) {
-            if (tipoConversion === 'encriptar') {
+        for (let [clave, valor] of Object.entries(clavesCodificacion)) {
+            if (tipoConversion === 'codificar') {
                 entrada = entrada.replaceAll(clave, valor);
             } else {
                 entrada = entrada.replaceAll(valor, clave);
