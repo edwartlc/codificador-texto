@@ -25,12 +25,12 @@
         </section>
         <section class="main__salida">
             <img id="imagenBusqueda" src="./assets/images/searching-1.png" alt="Ilustración de un hombre con una lupa buscando algo">
-            <h2 class="main__salida__subtitulo">Ningún mensaje fue encontrado</h2>
-            <p class="main__salida__mensaje">
+            <h2 id="salidaSubtitulo" class="main__salida__subtitulo">Ningún mensaje fue encontrado</h2>
+            <p id="salidaMensaje" class="main__salida__mensaje">
                 Ingrese el texto que desea codificar o descodificar.
             </p>
-            <textarea class="main__salida__texto" id="salida" hidden></textarea>
-            <button onclick="copiarTexto()" id="botonCopiar" hidden>Copiar</button>
+            <textarea class="main__salida__texto" id="salidaTexto"></textarea>
+            <button onclick="copiarTexto()" class="main__salida__boton" id="botonCopiar">Copiar</button>
         </section>
     </main>
     <footer>

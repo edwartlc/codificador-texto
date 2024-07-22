@@ -21,7 +21,10 @@ function convertirTexto(tipoConversion) {
     let entrada = String(document.getElementById('textoUsuario').value.replaceAll('  ', ' '));
     if (validarTexto(entrada) == false) {
         alert('Debe ingresar solo letras minúsculas sin acentos y sin caracteres especiales.');
-    } else {
+    } else if (entrada == '') {
+        alert('Debe ingresar solo letras minúsculas sin acentos y sin caracteres especiales.');
+    } else {    
+        cambiarDisplay();
         for (let [clave, valor] of Object.entries(clavesCodificacion)) {
             if (tipoConversion === 'codificar') {
                 entrada = entrada.replaceAll(clave, valor);
@@ -29,11 +32,22 @@ function convertirTexto(tipoConversion) {
                 entrada = entrada.replaceAll(valor, clave);
             }
         }
-        document.getElementById('salida').value = entrada;
+        document.getElementById('salidaTexto').value = entrada;
+        document.getElementById('textoUsuario').value = '';
     }
 }
 
 function copiarTexto() {
-    let texto = document.getElementById('salida');
+    let texto = document.getElementById('salidaTexto');
     navigator.clipboard.writeText(texto.value);
+    document.getElementById('botonDescodificar').removeAttribute('disabled');
+
+}
+
+function cambiarDisplay() {
+    document.getElementById('salidaTexto').style.display = 'block';
+    document.getElementById('botonCopiar').style.display = 'block';
+    document.getElementById('imagenBusqueda').style.display = 'none';
+    document.getElementById('salidaSubtitulo').style.display = 'none';
+    document.getElementById('salidaMensaje').style.display = 'none';
 }
