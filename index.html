@@ -9,27 +9,35 @@
 </head>
 <body>
     <main class="main">
+        <section class="lateral">
+            <img class="lateral__logo" src="./assets/icons/encryption-2.png" alt="Ícono encriptación">
+        </section>
         <section class="main__entrada">
             <textarea id="textoUsuario" class="main__entrada__texto" placeholder="Ingrese el texto aquí"></textarea>
             <p class="main__entrada__informacion">
-                <img class="main__entrada__informacion__icono" src="./assets/icons/info-circle-fill.svg" alt="Símbolo de advertencia">
+                <img class="main__entrada__informacion__icono" src="./assets/icons/warning-1.png" alt="Símbolo de advertencia">
                 Solo letras minúsculas sin acentos
             </p>
             <div class="main__entrada__botones">
                 <button onclick="convertirTexto('codificar')" id="botonCodificar">Encriptar</button>
-                <button onclick="convertirTexto('descodificar')" id="botonDescodificar">Desencriptar</button>
+                <button onclick="convertirTexto('descodificar')" id="botonDescodificar" disabled>Desencriptar</button>
             </div>
         </section>
         <section class="main__salida">
-            <textarea class="main__salida__texto" id="salida"></textarea>
-            <figure>
-                <img src="" alt="">
-            </figure>
-            <button onclick="copiarTexto()" id="botonCopiar">Copiar</button>
+            <img id="imagenBusqueda" src="./assets/images/searching-1.png" alt="Ilustración de un hombre con una lupa buscando algo">
+            <h2 class="main__salida__subtitulo">Ningún mensaje fue encontrado</h2>
+            <p class="main__salida__mensaje">
+                Ingrese el texto que desea codificar o descodificar.
+            </p>
+            <textarea class="main__salida__texto" id="salida" hidden></textarea>
+            <button onclick="copiarTexto()" id="botonCopiar" hidden>Copiar</button>
         </section>
     </main>
     <footer>
-        <small>Edwart Llanos 2024</small>
+        <small>2024 Edwart Llanos. Ilustración de 
+            <a href="https://icons8.com/illustrations/author/JTmm71Rqvb2T" class="footer__enlace">Dani Grapevine</a>, íconos por 
+            <a href="https://icons8.com/" class="footer__enlace">Icons8</a>
+        </small>
     </footer>
 </body>
 </html>
