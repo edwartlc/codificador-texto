@@ -153,6 +153,7 @@ body {
     font-size: 1rem;
     color: #495057;
     border: none;
+    word-wrap: break-word;
 }
 
 #botonCopiar {
@@ -186,7 +187,7 @@ footer {
     font-size: 0.8rem;
     color: #FFFFFF;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     font-weight: 500;
 }
 
@@ -240,7 +241,7 @@ footer {
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 420px) {
 
     .main__entrada__botones {
         flex-direction: column;
@@ -254,10 +255,8 @@ footer {
     #botonDescodificar {
         width: 100%;
     }
-}
 
-@media (pointer: coarse) {
-    #botonCodificar {
-      background: #052051;
+    footer {
+        height: 4rem;
     }
 }
