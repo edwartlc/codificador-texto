@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 /* reset CSS */
 * {
@@ -8,12 +9,6 @@
 }
 
 :root {
-    --boton-primario: #0A3871;
-    --boton-terciario: #D8DFE8;
-    --fondo-primario: #F3F5FC;
-    --texto-primario: #0A3871;
-    --texto-secundario: #495057;
-    --texto-terciario:  #FFFFFF;
     --fuente-inter: "Inter", sans-serif;
 }
 
@@ -25,18 +20,18 @@ body {
 .main {
     height: 100%;
     display: flex;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.3rem 1.5rem 1.2rem 1.5rem;
     justify-content: space-between;
     gap: 4rem;
 }
 
-.lateral {
+.main__lateral {
     width: 10%;
     height: 100%;
     padding: 0 4em;
 }
 
-.lateral__logo {
+.main__lateral__logo {
     width: 3rem;
 }
 
@@ -71,10 +66,6 @@ body {
     color: #495057;
 }
 
-.main__entrada__informacion__icono {
-    width: 1rem;
-}
-
 .main__entrada__botones {
     height: 3rem;
     display: flex;
@@ -94,7 +85,7 @@ body {
     background-color: #0A3871;
 }
 
-#botonCodificar:hover {
+#botonCodificar:enabled:hover {
     background-color: #205E97;
     border-color: #0A3871;
 }
@@ -120,8 +111,6 @@ body {
     background: #F9FBFF;
 }
 
-/*Hasta aquí perfecto*/
-
 .main__salida {
     width: 30%;
     height: 29.25rem;
@@ -132,7 +121,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     border-radius: 1.5rem;
-    box-shadow: 2px 2px 15px -6px rgba(0.3, 0, 0, 0.2);
+    box-shadow: 4px 16px 30px -8px rgba(0.3, 0, 0, 0.2);
 }
 
 #imagenBusqueda {
@@ -164,9 +153,6 @@ body {
     font-size: 1rem;
     color: #495057;
     border: none;
-    outline: none;
-    box-shadow: none;
-    resize: none;
 }
 
 #botonCopiar {
@@ -189,23 +175,28 @@ body {
 }
 
 footer {
+    position: absolute;
     width: 100%;
-    height: 2.5rem;
+    height: 3rem;
     background-color: #052051;
-    text-align: center;
-    padding: 0.75rem 0;
+}
+
+.footer__text {
     font-family: var(--fuente-inter);
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 500;
 }
 
 .footer__enlace {
     text-decoration: none;
-    color: #FFFFFF;   
+    color: #378CF0;   
 }
 
 .footer__enlace:hover {
-    color: #E9ECF8;
+    color: #26A2F3;
 }
 
 @media (max-width: 1200px) {
@@ -214,7 +205,7 @@ footer {
         padding: 5%;
     }
 
-    .lateral {
+    .main__lateral {
         padding: 0;
     }
     

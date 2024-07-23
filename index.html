@@ -4,23 +4,22 @@
     <link href="./assets/styles/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codificador</title>
+    <title>Codificador de texto</title>
     <script src="./scripts/app.js" defer></script>
 </head>
 <body>
     <main class="main">
-        <section class="lateral">
-            <img class="lateral__logo" src="./assets/icons/encryption-2.png" alt="Ícono encriptación">
+        <section class="main__lateral">
+            <img class="main__lateral__logo" src="./assets/icons/encryption-2.png" alt="Ícono encriptación">
         </section>
         <section class="main__entrada">
-            <textarea id="textoUsuario" class="main__entrada__texto" placeholder="Ingrese el texto aquí"></textarea>
-            <p class="main__entrada__informacion">
-                <img class="main__entrada__informacion__icono" src="./assets/icons/warning-1.png" alt="Símbolo de advertencia">
+            <textarea id="textoUsuario" class="main__entrada__texto" placeholder="Ingrese el texto aquí" onclick="habilitarBotones()"></textarea>
+            <p class="main__entrada__informacion"><i class="bi bi-exclamation-circle"></i>
                 Solo letras minúsculas sin acentos
             </p>
             <div class="main__entrada__botones">
-                <button onclick="convertirTexto('codificar')" id="botonCodificar">Encriptar</button>
-                <button onclick="convertirTexto('descodificar')" id="botonDescodificar" disabled>Desencriptar</button>
+                <button onclick="convertirTexto('codificar')" id="botonCodificar" disabled>Codificar</button>
+                <button onclick="convertirTexto('descodificar')" id="botonDescodificar" disabled>Descodificar</button>
             </div>
         </section>
         <section class="main__salida">
@@ -29,15 +28,15 @@
             <p id="salidaMensaje" class="main__salida__mensaje">
                 Ingrese el texto que desea codificar o descodificar.
             </p>
-            <textarea class="main__salida__texto" id="salidaTexto"></textarea>
+            <div class="main__salida__texto" id="salidaTexto"><span id="textoModificado"></span></div>
             <button onclick="copiarTexto()" class="main__salida__boton" id="botonCopiar">Copiar</button>
         </section>
     </main>
     <footer>
-        <small>2024 Edwart Llanos. Ilustración de 
-            <a href="https://icons8.com/illustrations/author/JTmm71Rqvb2T" class="footer__enlace">Dani Grapevine</a>, íconos por 
-            <a href="https://icons8.com/" class="footer__enlace">Icons8</a>
-        </small>
+        <p class="footer__text">2024 Edwart Llanos. Ilustración por 
+            <a href="https://icons8.com/illustrations/author/JTmm71Rqvb2T" class="footer__enlace" target="_blank">Dani Grapevine</a> de 
+            <a href="https://icons8.com/illustrations" class="footer__enlace" target="_blank">Ouch! <i class="bi bi-link-45deg"></i></a>
+        </p>
     </footer>
 </body>
 </html>

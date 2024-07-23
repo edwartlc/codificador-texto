@@ -1,5 +1,5 @@
 const clavesCodificacion = {'e': 'enter', 'i': 'imes', 'a': 'ai', 'o': 'ober', 'u': 'ufat'};
-const caracteresValidos = ' abcdefghijklmnopqrstuvwxyz';
+const caracteresValidos = ' !abcdefghijklmnopqrstuvwxyz';
 
 function validarTexto(texto) {
     let esValido = [];
@@ -19,10 +19,11 @@ function validarTexto(texto) {
 
 function convertirTexto(tipoConversion) {
     let entrada = String(document.getElementById('textoUsuario').value.replaceAll('  ', ' '));
+    let salida = '';
     if (validarTexto(entrada) == false) {
         alert('Debe ingresar solo letras minúsculas sin acentos y sin caracteres especiales.');
     } else if (entrada == '') {
-        alert('Debe ingresar solo letras minúsculas sin acentos y sin caracteres especiales.');
+        alert('Debe ingresar el texto que quiere codificar o descodificar.');
     } else {    
         cambiarDisplay();
         for (let [clave, valor] of Object.entries(clavesCodificacion)) {
@@ -32,15 +33,17 @@ function convertirTexto(tipoConversion) {
                 entrada = entrada.replaceAll(valor, clave);
             }
         }
-        document.getElementById('salidaTexto').value = entrada;
+        document.getElementById('textoModificado').innerHTML = entrada;
         document.getElementById('textoUsuario').value = '';
     }
 }
 
 function copiarTexto() {
-    let texto = document.getElementById('salidaTexto');
-    navigator.clipboard.writeText(texto.value);
-    document.getElementById('botonDescodificar').removeAttribute('disabled');
+    let texto = document.querySelector('#textoModificado');
+    navigator.clipboard.writeText(texto.textContent);
+    document.getElementById('textoModificado').style.color = '#FAFAFA'
+    document.getElementById('textoModificado').style.backgroundColor = '#1940C7'
+    
 
 }
 
@@ -50,4 +53,10 @@ function cambiarDisplay() {
     document.getElementById('imagenBusqueda').style.display = 'none';
     document.getElementById('salidaSubtitulo').style.display = 'none';
     document.getElementById('salidaMensaje').style.display = 'none';
+}
+
+function habilitarBotones() {
+    document.getElementById('botonCodificar').removeAttribute('disabled');
+    document.getElementById('botonDescodificar').removeAttribute('disabled');
+    document.getElementById('textoModificado').removeAttribute('style');
 }
