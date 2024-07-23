@@ -255,9 +255,3 @@ footer {
         width: 100%;
     }
 }
-
-@media (pointer: coarse) {
-    #botonCodificar {
-      background: #052051;
-    }
-}
